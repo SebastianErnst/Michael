@@ -1,14 +1,10 @@
 <?php
-
 $videoIds = [
     'XXzhW9pJxpw',
     'ktmjHa6kKDE',
     'Hrt6IjH4NuY'
 ];
-
-
 ?>
-
 <section id="listen" class="listen">
     <div class="main-wrapper">
         <div class="inner-wrapper">
