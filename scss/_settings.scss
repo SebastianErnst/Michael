@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+$z-index: (
+    background: 1,
+    particleJS: 2,
+    bottomShadow: 3,
+    content: 4
+);
+
+$purple: #6339FF;
+$orange: #FF8F00;
+$bgColorDark: #0a090d;
+$bgColorLight: #13111a;
+
+$fontFamilyHeading: 'Oswald', sans-serif;
+$fontFamilyText: 'Oswald', sans-serif;
+
+$fontSizeSmall: 14px;
+$fontSizeNormal: 16px;
+$fontSizeLarge: 20px;
+$fontSizeXLarge: 30px;
+$fontSizeXXLarge: 40px;
+
+$spaceXSmall: 12px;
+$spaceSmall: 25px;
+$spaceNormal: 50px;
+$spaceLarge: 75px;
+
+$fontDark: #000;
+$fontLight: #fff;
+
+$starColor: #fff;
+$starLineColor: rgba(#fff, 0.25);
+
+$breakpoints: (
+    small: 0px,
+    medium: 468px,
+    large: 769px
+);
+
+$anchorTransitionTimeAndEasingIn: 0.4s ease-out;
+$anchorTransitionTimeAndEasingOut: 0.2s ease-out;

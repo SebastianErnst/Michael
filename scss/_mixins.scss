@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@function z-index($map, $key) {
+    @return map-get($map, $key);
+}
+
+@mixin anchor-hover() {
+    cursor: pointer;
+    transition: background-size $anchorTransitionTimeAndEasingOut;
+    background: linear-gradient(to bottom, $orange 0%, $orange 100%) repeat-x 0 100%;
+    background-size: 1px 1px;
+    &:hover {
+        transition: background-size $anchorTransitionTimeAndEasingIn;
+        @include anchor-hover-property;
+    }
+}
+
+@mixin anchor-hover-property() {
+    background-size: 2px 100%;
+}
+
+@mixin clearfix() {
+    &::after {
+        content: ".";
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0px;
+    }
+}
+
+@mixin reset-button() {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-spacing: 0;
+    color: #26589F;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+}
