@@ -9,7 +9,6 @@ class MainApplication {
     constructor() {
         $(document).foundation();
         window.particlesJS.load('particles-js-header', 'assets/particles.json');
-        window.particlesJS.load('particles-js-listen', 'assets/particles-image.json');
 
         $('.horizontal-teaser a').on('click', (event) => {
             event.preventDefault();
