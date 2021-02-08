@@ -1,45 +1,25 @@
 @charset "UTF-8";
 
 .main-menu {
-    background: {
-        color: rgba($bgColorDark, 1);
-    }
-    @include breakpoint(large) {
-        background: {
-            color: rgba($bgColorDark, 0.5);
-        }
-    }
-    z-index: 1000;
-    position: fixed;
+    z-index: 11111;
+    position: absolute;
     top: 0;
-    right: 0;
     left: 0;
+    right: 0;
+    width: 100%;
+    height: 85px;
+    background-color: rgba($bgColorDark, 0.6);
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
     ul {
-        display: inline-flex;
-        list-style: none;
-        padding: {
-            top: rem-calc(25);
-            right: rem-calc(25);
-            bottom: rem-calc(25);
-            left: rem-calc(25);
-        }
-        margin: 0;
-        @include breakpoint(large) {
-            margin: {
-                top: 0;
-                left: auto;
-                bottom: 0;
-                right: 0;
-            }
-        }
+        @include reset-list;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         li {
-            font: {
-                size: $fontSizeLarge;
-            }
             margin: {
-                right: 15px;
+                right: $spaceSmall;
             }
             &:last-child {
                 margin: {

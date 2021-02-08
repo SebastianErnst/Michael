@@ -4,34 +4,37 @@ h1,
 h2 {
     margin: {
         top: 0;
-        bottom: $spaceSmall;
+        bottom: $spaceXSmall;
     }
 }
 
-h2 {
+.h1,
+h1 {
     position: relative;
     line-height: 1;
-    display: inline-block;
-    color: $fontLight;
+    display: block;
+    color: $yellow;
+    font: {
+        family: $fontFamilyHeading;
+        weight: 700;
+        size: $fontSizeXXXLarge;
+    }
+}
+
+
+.h2,
+h2 {
+    //.section-dark & {
+    //    color: $fontLight;
+    //}
+    position: relative;
+    line-height: 1;
+    display: block;
+    color: $turquoiseLight;
     font: {
         family: $fontFamilyHeading;
         weight: 700;
         size: $fontSizeXXLarge;
-    }
-    padding: 10px;
-    background:
-        linear-gradient($starLineColor, $starLineColor) bottom left / 100% 1px,
-        linear-gradient($starLineColor, $starLineColor) left bottom / 1px 50%;
-    background-repeat:no-repeat;
-    &::before {
-        content: "";
-        background: $orange;
-        position: absolute;
-        left: -2px;
-        bottom: -2px;
-        height: 6px;
-        width: 6px;
-        border-radius: 50%;
     }
 }
 

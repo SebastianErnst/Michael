@@ -12,13 +12,36 @@ html {
     position: relative;
     font: {
         size: 106.25%;
-        family: 'Lato', sans-serif;
+        family: $fontFamilyText;
     }
     color: $fontLight;
+    line-height: 1.4;
+}
+
+.keymessage {
+    .section-green & {
+        color: $fontLight;
+    }
+    max-width: 75%;
+    margin: {
+        top: 0;
+        bottom: $spaceSmall;
+    }
+    color: $turquoiseDark;
+    font: {
+        size: $fontSizeXLarge;
+        weight: 1000;
+        family: $fontFamilyIntros;
+    }
+}
+
+.intro {
+    margin: 0;
 }
 
 section {
-    background-color: $bgColorLight;
+    color: $fontDark;
+    background: $bgColorLight;
     padding-bottom: $spaceNormal;
     @include breakpoint(medium) {
         padding-bottom: $spaceLarge;
@@ -26,8 +49,12 @@ section {
     @include breakpoint(large) {
         padding-bottom: $spaceLarge*1.5;
     }
+    &.section-green {
+        background: $turquoiseDark;
+        color: $fontLight;
+    }
     &.section-dark {
-        background-color: $bgColorDark;
+        background: $bgColorDark;
     }
     &:last-child {
         padding-bottom: 0;
@@ -40,19 +67,23 @@ section {
             padding-top: $spaceLarge;
         }
         @include breakpoint(large) {
-            padding-bottom: $spaceLarge*1.5;
-            padding-top: $spaceLarge*1.5;
+            padding-bottom: $spaceLarge;
+            padding-top: $spaceLarge;
         }
     }
 }
 
 .main-wrapper {
-    max-width: 1060px;
+    width: 100%;
+    max-width: 1920px;
     margin: 0 auto;
-
+    position: relative;
 }
 
 .inner-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     padding: 0 $spaceXSmall;
     @include breakpoint(medium) {
         padding: 0 $spaceSmall;
@@ -60,23 +91,13 @@ section {
     @include breakpoint(large) {
         padding: 0 $spaceNormal;
     }
-
-}
-
-.particles-js {
-    z-index: z-index($z-index, particleJS);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
 blockquote {
     margin: {
         top: 0;
         right: 0;
-        bottom: $spaceXSmall;
+        bottom: 0;
         left: 0;
     }
     font: {
@@ -85,23 +106,15 @@ blockquote {
     }
     &::before,
     &::after {
-        font-size: $fontSizeXLarge;
-        color: $orange;
+        line-height: 1;
+        font-size: $fontSizeLarge;
+        color: $turquoiseDark;
     }
     &::after {
         content: "\"";
     }
     &::before {
         content: "\"";
-    }
-}
-
-.author {
-    display: inline-block;
-    margin-bottom: $spaceSmall;
-    &::before {
-        content: "\2014\00a0";
-        color: $orange;
     }
 }
 

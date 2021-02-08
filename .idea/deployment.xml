@@ -5,7 +5,7 @@
       <paths name="Sebern">
         <serverdata>
           <mappings>
-            <mapping deploy="/httpdocs/micha" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/httpdocs/oliver_kroiss" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
