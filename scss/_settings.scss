@@ -1,39 +1,25 @@
 @charset "UTF-8";
 
 $z-index: (
-    background: 0,
-    particleJS: 1,
-    bottomShadow: 2,
-    content: 3
+    background: 1,
+    particleJS: 2,
+    bottomShadow: 3,
+    content: 4
 );
 
+$purple: #6339FF;
+$orange: #FF8F00;
+$bgColorDark: #0a090d;
+$bgColorLight: #13111a;
 
-$turquoise: #1c6567;
-$turquoiseLight: #539394;
-$turquoiseDark: #003e41;
-
-$beige: #cfbda5;
-$beigeLight: #faf6f2;
-$beigeDark: #bfbcb8;
-
-$greyDark: #212121;
-
-$yellow: #ddaf1f;
-$bgColorDark: $beigeDark;
-$bgColorLight: $beigeLight;
-
-$fontFamilyIntros: 'Between', sans-serif;
-$fontFamilyHeading: 'Balibong', sans-serif;
-$fontFamilyText: 'Bitter', serif;
-
-//$fontSizeSmall: (14px, );
+$fontFamilyHeading: 'Oswald', sans-serif;
+$fontFamilyText: 'Oswald', sans-serif;
 
 $fontSizeSmall: 14px;
 $fontSizeNormal: 16px;
 $fontSizeLarge: 20px;
 $fontSizeXLarge: 30px;
 $fontSizeXXLarge: 40px;
-$fontSizeXXXLarge: 60px;
 
 $spaceXSmall: 12px;
 $spaceSmall: 25px;
@@ -43,13 +29,14 @@ $spaceLarge: 75px;
 $fontDark: #000;
 $fontLight: #fff;
 
+$starColor: #fff;
+$starLineColor: rgba(#fff, 0.25);
+
 $breakpoints: (
-    small: 0,
+    small: 0px,
     medium: 468px,
     large: 769px
 );
 
-$global-radius: 5px;
-
-$anchorTransitionTimeAndEasingIn: 0.25s ease-out;
-$anchorTransitionTimeAndEasingOut: 0.15s ease-out;
+$anchorTransitionTimeAndEasingIn: 0.4s ease-out;
+$anchorTransitionTimeAndEasingOut: 0.2s ease-out;

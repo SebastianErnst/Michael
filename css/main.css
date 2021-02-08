@@ -1,0 +1,178 @@
+/**
+ * Foundation for Sites
+ * Version 6.6.3
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+@media print, screen and (min-width: 40em) {
+  .horizontal-teaser {
+    display: none; } }
+
+.horizontal-teaser ul {
+  height: 420px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  display: flex;
+  width: 100%;
+  margin-left: -5px;
+  margin-right: -5px; }
+  .horizontal-teaser ul:hover li div {
+    border: 1px solid rgba(255, 143, 0, 0.65); }
+    .horizontal-teaser ul:hover li div a:before {
+      opacity: 1; }
+    .horizontal-teaser ul:hover li div .title {
+      transform: translate(-50%, -50%) rotate(-90deg);
+      top: 50%;
+      left: 50%;
+      transition-delay: 0s; }
+  .horizontal-teaser ul li {
+    position: relative;
+    transition: width 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 0.5, 0.5, 1);
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-basis: auto;
+    width: 20%;
+    flex-grow: 1; }
+    .horizontal-teaser ul li:hover {
+      width: 80%; }
+      .horizontal-teaser ul li:hover div {
+        border: 1px solid transparent; }
+        .horizontal-teaser ul li:hover div .inner .title {
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 75px; }
+        .horizontal-teaser ul li:hover div .inner .desc {
+          transition: opacity 0.15s, transform 0.5s, top 0.5s, left 0.5s;
+          transition-delay: 0.5s;
+          transition-timing-function: cubic-bezier(1, 0, 1, 1);
+          opacity: 1; }
+  .horizontal-teaser ul div {
+    height: 100%;
+    border-radius: 0px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: border 0.5s; }
+  .horizontal-teaser ul a::before {
+    transition: opacity 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 0.5, 0.5, 1);
+    opacity: 0;
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 98%, rgba(0, 0, 0, 0) 99%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .horizontal-teaser ul .inner {
+    position: relateive;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 50px 25px;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%; }
+  .horizontal-teaser ul .title,
+  .horizontal-teaser ul .desc {
+    color: white;
+    display: block;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+    position: relative; }
+  .horizontal-teaser ul .title {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 215px;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    border-bottom: 2px solid #FF8F00;
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    transition: opacity 0.15s, transform 0.5s, top 0.5s, left 0.5s;
+    transition-delay: 0.1s; }
+  .horizontal-teaser ul .desc {
+    text-align: left;
+    padding-top: 75px;
+    line-height: 1.25;
+    font-size: 17px;
+    opacity: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; }
+
+section {
+  background-color: #1d1a26;
+  padding: 50px 0; }
+  section.section-dark {
+    background-color: #0a090d; }
+
+.main-wrapper {
+  max-width: 1060px;
+  margin: 0 auto; }
+
+.inner-wrapper {
+  padding: 0 50px; }
+
+header {
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1d1a26 0%, #0a090d 100%);
+  background-size: cover;
+  background-position: top; }
+  header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(0deg, #0a090d 0%, rgba(10, 9, 13, 0) 100%); }
+  header .inner-wrapper {
+    position: relative; }
+  header .img-wrapper {
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    line-height: 0;
+    top: 35%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    max-height: 300px;
+    max-width: 300px;
+    animation: fromBelow 2s;
+    transform: translate(-50%, -50%); }
+
+@keyframes fromBelow {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 300px; } }
+  header blockquote {
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    animation: fromAbove 4s;
+    font-style: italic;
+    width: 100%;
+    max-width: 75%;
+    font-size: 40px;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 0); }

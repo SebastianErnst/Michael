@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 footer {
-    background-color: $greyDark;
+    background-color: $bgColorDark;
     .footer {
         display: flex;
         align-items: center;
@@ -39,7 +39,7 @@ footer {
                     color: $fontLight;
                     &:hover {
                         transition: color $anchorTransitionTimeAndEasingIn;
-                        color: $turquoise;
+                        color: $orange;
                     }
                 }
             }

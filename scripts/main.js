@@ -1,61 +1,40 @@
 import $ from 'jquery';
-import Swiper from '../node_modules/swiper/js/swiper.min';
+import lightGallery from 'lightgallery';
+import 'lg-video';
+import { smoothScroll } from "foundation-sites";
+
+require('particles.js');
 
 class MainApplication {
     constructor() {
-        // $(document).foundation();
-        $('[data-main-menu-trigger]').on('click', () => {
-            $('[data-main-menu-trigger]').find('.hamburger-icon').toggleClass('active');
-            $('[data-main-menu]').toggleClass('active');
-        })
+        $(document).foundation();
+        window.particlesJS.load('particles-js-header', 'assets/particles.json');
 
-        $('.video-wrapper').on('click', () => {
-            console.log('a')
-            let video = $('.video-wrapper').find('video')[0];
-            if (video.paused === true) {
-                video.play();
-                $('.video-trigger').hide();
-            } else {
-                video.pause();
-                $('.video-trigger').show();
-            }
+        $('.horizontal-teaser a').on('click', (event) => {
+            event.preventDefault();
         });
 
-        $('[data-swiper-container]').each((index, element) => {
-            let $parent = $(element).parent();
-            const testimonilSLider = new Swiper(element, {
-                speed: 500,
-                slidesPerView: 1.3,
-                spaceBetween: 25,
-                pagination: {
-                    el: $parent.find('.swiper-pagination'),
-                    type: 'bullets',
-                },
-                navigation: {
-                    nextEl: $parent.find('.swiper-button-next'),
-                    prevEl: $parent.find('.swiper-button-prev')
-                }
-                // loop: true
-                // autoplay: {
-                //     delay: 5000,
-                // }
-            });
-
-            $parent.find('.swiper-slide-next').on('click', () => {
-                testimonilSLider.slideNext();
-            });
-
-            testimonilSLider.on('slideChangeTransitionEnd', () => {
-                $parent.find('.swiper-slide').off();
-                $parent.find('.swiper-slide-next').on('click', () => {
-                    testimonilSLider.slideNext();
-                });
-
-                $parent.find('.swiper-slide-prev').on('click', () => {
-                    testimonilSLider.slidePrev();
-                });
+        $('[data-gallery]').each((index, element) => {
+            $(element).lightGallery({
+                download: false,
+                controls: false,
+                counter: false,
+                enableDrag: false,
+                enableTouch: false
             });
         });
+
+        $('[data-modal-open]').on('click', (event) => {
+            event.preventDefault();
+            $('[data-modal]').toggleClass('is-active');
+        });
+
+        $('[data-modal-close]').on('click', (event) => {
+            event.preventDefault();
+            $('[data-modal]').toggleClass('is-active');
+        });
+
+
     }
 }
 

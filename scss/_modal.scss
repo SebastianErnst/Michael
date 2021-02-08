@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.modal-wrapper {
+    transition: opacity $anchorTransitionTimeAndEasingOut;
+    &.is-active {
+        opacity: 1;
+        pointer-events: all;
+    }
+    pointer-events: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    background: $bgColorDark;
+    .main-wrapper {
+        overflow-y: scroll;
+        height: 100%;
+
+        padding: {
+            top: $spaceNormal;
+            bottom: $spaceNormal;
+        }
+    }
+    .inner-wrapper {
+        position: relative;
+    }
+    .modal {
+        padding: {
+            top: 75px;
+            bottom: 50px;
+        }
+    }
+    .close {
+        @include reset-button;
+        cursor: pointer;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 0;
+        right: $spaceSmall;
+        svg {
+            transition: color $anchorTransitionTimeAndEasingOut;
+            color: rgba($fontLight, 0.5);
+            &:hover {
+                color: $orange;
+                transition: color $anchorTransitionTimeAndEasingIn;
+            }
+        }
+    }
+}

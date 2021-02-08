@@ -1,0 +1,185 @@
+@charset "UTF_8";
+
+.horizontal-teaser {
+    display: flex;
+    @include breakpoint(medium down) {
+        flex: {
+            direction: column;
+        }
+        list-style: none;
+        padding: 0;
+        li {
+            margin-bottom: $spaceXSmall;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            div {
+                .inner {
+                    position: relative;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    padding: $spaceSmall $spaceXSmall;
+                    @include breakpoint(medium) {
+                        padding: $spaceNormal $spaceSmall;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 98%, rgba(0, 0, 0, 0.5) 99%);
+                    }
+                    .title,
+                    .desc {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .title {
+                        @include anchor-hover;
+                        @include anchor-hover-property;
+                        padding: 5px;
+                        cursor: none;
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint(large) {
+        $widthTransitionDuration: 0.5;
+        $widthTransitionTimingFunction: cubic-bezier(.5, .5, .5, 1);
+        $textTransition: background-size #{$widthTransitionDuration}s,
+        opacity 0.15s, transform #{$widthTransitionDuration}s,
+        top #{$widthTransitionDuration}s,
+        left #{$widthTransitionDuration}s;
+        $spaceBetween: 5;
+        $hoverBoxSizeInPercent: 80;
+
+        //Don't override
+        $NotHoverBoxSizeInPercent: 100 - $hoverBoxSizeInPercent;
+
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 420px;
+        margin: {
+            top: 0;
+            left: -#{$spaceBetween}px;
+            bottom: -#{$spaceBetween}px;
+            right: -#{$spaceBetween}px;
+        }
+        &:hover {
+            li {
+                div {
+                    border: 1px solid rgba($orange, 0.65);
+                    .inner {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                    .title {
+                        transform: translate(-50%, -50%) rotate(-90deg);
+                        top: 50%;
+                        left: 50%;
+                        transition-delay: 0s;
+                    }
+                }
+            }
+        }
+        li {
+            position: relative;
+            flex-basis: auto;
+            flex-grow: 1;
+            padding: {
+                top: 0;
+                left: #{$spaceBetween}px;
+                bottom: #{$spaceBetween}px;
+                right: #{$spaceBetween}px;
+            }
+            transition: width #{$widthTransitionDuration}s;
+            transition-timing-function: $widthTransitionTimingFunction;
+            width: #{$NotHoverBoxSizeInPercent + "%"};
+            &:hover {
+                width: #{$hoverBoxSizeInPercent + "%"};
+                div {
+                    border: 1px solid transparent;
+                    .inner {
+                        .title {
+                            @include anchor-hover-property();
+                            transform: translate(-50%, -50%);
+                            left: 50%;
+                            top: 75px;
+                        }
+                        .desc {
+                            transition: $textTransition;
+                            transition-delay: #{$widthTransitionDuration}s;
+                            transition-timing-function: cubic-bezier(1, 0, 1, 1);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        div {
+            height: 100%;
+            border-radius: 0;
+            overflow: hidden;
+            transition: border #{$widthTransitionDuration}s;
+            border: 1px solid transparent;
+        }
+        .inner {
+            position: relative;
+            text-decoration: none;
+            display: block;
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            padding: $spaceNormal $spaceSmall;
+            text-align: center;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: opacity #{$widthTransitionDuration}s;
+                transition-timing-function: $widthTransitionTimingFunction;
+                background: linear-gradient(to bottom, rgba($bgColorDark, 0.45) 0%, rgba($bgColorDark, 0.6) 50%, rgba($bgColorDark, 0.45) 100%);
+                opacity: 0;
+            }
+        }
+        .title,
+        .desc {
+            color: white;
+            display: block;
+            text-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+        .title {
+            @include anchor-hover-property();
+            @include anchor-hover;
+            padding: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 215px;
+            transition: $textTransition;
+            transition-delay: 0.1s;
+            transform: translate(-50%, -50%);
+            cursor: default;
+            display: inline-block;
+        }
+        .desc {
+            padding-top: 75px;
+            text-align: left;
+            line-height: 1.25;
+            opacity: 0;
+        }
+    }
+}
