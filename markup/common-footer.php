@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.instagram.com/micha_und_die_kleinen_kollegen/">
+                        <a target="_blank" href="https://www.instagram.com/ms_music_and_sound_design/">
                             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
                                  class="svg-inline--fa fa-instagram fa-w-14" role="img"
                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -72,7 +72,7 @@
                 Strenzfelder Allee 10</br>
                 06406 Bernburg</br>
                 Contact Information</br>
-                E-Mail: info@michael-seifert-sound.de</br>
+                E-Mail: info@michael-seifert-sound.com</br>
                 Internet address: www.michael-seifert-sound.de
 
                 <h4>Disclaimer</h4>
@@ -105,7 +105,7 @@
                 Individual reproductions of a work are only allowed for private use.
                 The materials from these pages are copyrighted and any unauthorized use may violate copyright laws.
 
-                <h5>Designed and developed by <a href="mailto:ernst.sebastian1991@gmail.com">Sebastian Ernst</a></h5>
+                <h5>Designed and developed by <a href="mailto:info@sebern.de">Sebastian Ernst</a></h5>
             </div>
         </div>
     </div>

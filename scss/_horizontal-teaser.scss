@@ -8,6 +8,10 @@
         }
         list-style: none;
         padding: 0;
+        margin: {
+            top: 0;
+            bottom: $spaceXSmall;
+        }
         li {
             margin-bottom: $spaceXSmall;
             &:last-child {
@@ -69,10 +73,12 @@
         margin: {
             top: 0;
             left: -#{$spaceBetween}px;
-            bottom: -#{$spaceBetween}px;
             right: -#{$spaceBetween}px;
+            bottom: #{$spaceBetween * 2}px;
         }
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             li {
                 div {
                     border: 1px solid rgba($orange, 0.65);
@@ -97,13 +103,14 @@
             padding: {
                 top: 0;
                 left: #{$spaceBetween}px;
-                bottom: #{$spaceBetween}px;
                 right: #{$spaceBetween}px;
             }
             transition: width #{$widthTransitionDuration}s;
             transition-timing-function: $widthTransitionTimingFunction;
             width: #{$NotHoverBoxSizeInPercent + "%"};
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
                 width: #{$hoverBoxSizeInPercent + "%"};
                 div {
                     border: 1px solid transparent;

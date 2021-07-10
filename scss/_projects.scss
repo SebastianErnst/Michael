@@ -1,0 +1,94 @@
+@charset "UTF_8";
+
+.projects {
+    position: relative;
+    $transitionOpacity: opacity 500ms ease-out;
+    .swiper-container {
+        padding: {
+            top: $spaceLarge * 1.5;
+            bottom: $spaceLarge *1.5;
+        }
+    }
+    .swiper-slide {
+        width: 70%;
+        @include breakpoint(medium) {
+            width: 55%;
+        }
+        @include breakpoint(large) {
+            width: 40%;
+        }
+
+    }
+    .swiper-slide-active {
+        .project {
+            opacity: 1;
+            .content {
+                h3,
+                .copyright {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $orange;
+    }
+    .swiper-button-next {
+        right: $spaceXSmall;
+        @include breakpoint(medium) {
+            right: $spaceSmall*1.25;
+        }
+        @include breakpoint(large) {
+            right: -$spaceSmall*1.75;
+        }
+    }
+    .swiper-button-prev {
+        left: $spaceXSmall;
+        @include breakpoint(medium) {
+            left: $spaceSmall*1.25;
+        }
+        @include breakpoint(large) {
+            left: -$spaceSmall*1.75;
+        }
+    }
+    .project {
+        @include aspect-ratio(1, 1);
+        transition: $transitionOpacity;
+        .image {
+            position: absolute;
+            top:0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: {
+                size: cover;
+                position: 50% 50%;
+                repeat: no-repeat;
+            }
+        }
+        .content {
+            h3 {
+                text-align: center;
+                width: 100%;
+                display: block;
+                transition: $transitionOpacity;
+                opacity: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 105%;
+            }
+            .copyright {
+                transition: $transitionOpacity;
+                opacity: 0;
+                font-size: $fontSizeSmall;
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 101%;
+            }
+        }
+    }
+}

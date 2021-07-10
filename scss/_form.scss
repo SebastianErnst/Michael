@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+form {
+    display: flex;
+    flex: {
+        wrap: wrap;
+    }
+    margin: {
+        right: -$spaceSmall;
+        bottom: -$spaceSmall;
+        left: -$spaceSmall;
+    }
+    .error-label {
+        color: #be0000;
+    }
+    .button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: {
+            right: $spaceSmall;
+            left: $spaceSmall;
+        }
+        @include breakpoint(medium) {
+            padding: {
+                top: $spaceSmall;
+                right: $spaceSmall;
+                bottom: $spaceSmall;
+                left: $spaceSmall;
+            }
+        }
+
+    }
+    .input-wrapper {
+        padding: {
+            right: $spaceSmall;
+            bottom: $spaceSmall;
+            left: $spaceSmall;
+        }
+        width: 100%;
+        display: flex;
+        flex: {
+            direction: column;
+        }
+        justify-content: flex-start;
+        align-items: flex-start;
+        &.half {
+            @include breakpoint(medium) {
+                width: 50%;
+            }
+        }
+        label {
+            order: 1;
+            margin: {
+                bottom: $spaceXSmall/2;
+            }
+        }
+        input,
+        textarea {
+            background: {
+                color: $fontLight;
+            }
+            box-shadow: none;
+            font: {
+                family: $fontFamilyText;
+                size: $fontSizeNormal;
+            }
+            border: {
+                width: 0;
+            }
+            padding: $spaceXSmall;
+            max-width: 100%;
+            min-width: 100%;
+        }
+        button {
+            display: inline-block;
+        }
+        > * {
+            order: 2;
+        }
+    }
+}

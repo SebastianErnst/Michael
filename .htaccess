@@ -1,2 +1,2 @@
-RewriteEngine on
-RewriteRule ^(.*)$ / [R=301,L]
+#RewriteEngine on
+#RewriteRule ^(.*)$ / [R=301,L]

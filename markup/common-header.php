@@ -26,27 +26,29 @@
     <title>Michael Seifert Music & Sound Design</title>
     <meta name="author" content="Michael Seifert - Music & Sound Design">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:domain" content="https://www.michael-seifert-sound.de">
+    <meta name="twitter:domain" content="https://www.michael-seifert-sound.com">
     <meta name="twitter:title" content="Michael Seifert - Music & Sound Design">
     <meta name="twitter:text:description" content="Music and sound designer for games, movies and trailers.">
     <meta name="twitter:description" content="Music and sound designer for games, movies and trailers.">
-    <meta name="twitter:image" content="http://www.sebern.de/micha/assets/social-share-image.png">
+    <meta name="twitter:image" content="http://www.michael-seifert-sound.com/micha/assets/social-share-image.png">
 
     <meta property="og:title" content="Michael Seifert - Music & Sound Design">
-    <meta property="og:url" content="https://www.michael-seifert-sound.de">
+    <meta property="og:url" content="https://www.michael-seifert-sound.com">
     <meta property="og:type" content="article">
     <meta property="og:description" content="Music and sound designer for games, movies and trailers.">
-    <meta property="og:image" content="http://www.sebern.de/micha/assets/social-share-image.png">
+    <meta property="og:image" content="http://www.michael-seifert-sound.com/micha/assets/social-share-image.png">
     <meta property="og:updated_time" content="2020-08-18T11:07:26+02:00">
     <meta property="article:modified_time" content="2020-08-18T11:07:26+02:00">
     <meta name="description" content="Music and sound designer for games, movies and trailers.">
 
-
-
     <script defer src="build/runtime.js" type="module"></script>
     <script defer src="build/vendor.js" type="module"></script>
     <script defer src="build/main.js" type="module"></script>
+
+    <script defer src="node_modules/particles.js/particles.js"></script>
+
     <link rel="stylesheet" type="text/css" href="./build/main.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">

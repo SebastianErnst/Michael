@@ -10,7 +10,7 @@
                     <span>GERMANY</span>
                 </div>
                 <div class="block">
-                    <span>E-Mail: <a href="mailto:info@michael-seifert-sound.de">info@michael-seifert-sound.de</a></span>
+                    <span>E-Mail: <a href="mailto:info@michael-seifert-sound.com">info@michael-seifert-sound.com</a></span>
                 </div>
             </div>
         </div>

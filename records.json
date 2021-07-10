@@ -1,11 +1,83 @@
 {
   "modules": {
-    "byIdentifier": {},
-    "usedIds": {}
+    "byIdentifier": {
+      "node_modules/expose-loader/index.js?jQuery!node_modules/expose-loader/index.js?$!node_modules/jquery/dist/jquery.js": 0,
+      "node_modules/webpack/buildin/global.js": 1,
+      "node_modules/expose-loader/index.js?$!node_modules/jquery/dist/jquery.js": 2,
+      "node_modules/jquery/dist/jquery.js": 3,
+      "node_modules/lightgallery/dist/js/lightgallery.js": 4,
+      "node_modules/lg-video/dist/lg-video.js": 5,
+      "node_modules/particles.js/particles.js": 6,
+      "scripts/main.js 72384368fcc20351090d2a889ef240bf": 7,
+      "node_modules/swiper/swiper.esm.js": 7,
+      "scripts/main.js 6129f2d512503b622a1cb322ae485d59": 8,
+      "node_modules/swiper/esm/components/a11y/a11y.js": 9,
+      "node_modules/swiper/esm/components/autoplay/autoplay.js": 10,
+      "node_modules/swiper/esm/components/controller/controller.js": 11,
+      "node_modules/swiper/esm/components/effect-coverflow/effect-coverflow.js": 12,
+      "node_modules/swiper/esm/components/effect-cube/effect-cube.js": 13,
+      "node_modules/swiper/esm/components/effect-fade/effect-fade.js": 14,
+      "node_modules/swiper/esm/components/effect-flip/effect-flip.js": 15,
+      "node_modules/swiper/esm/components/hash-navigation/hash-navigation.js": 16,
+      "node_modules/swiper/esm/components/history/history.js": 17,
+      "node_modules/swiper/esm/components/keyboard/keyboard.js": 18,
+      "node_modules/swiper/esm/components/lazy/lazy.js": 19,
+      "node_modules/swiper/esm/components/mousewheel/mousewheel.js": 20,
+      "node_modules/swiper/esm/components/navigation/navigation.js": 21,
+      "node_modules/swiper/esm/components/pagination/pagination.js": 22,
+      "node_modules/swiper/esm/components/parallax/parallax.js": 23,
+      "node_modules/swiper/esm/components/scrollbar/scrollbar.js": 24,
+      "node_modules/swiper/esm/components/thumbs/thumbs.js": 25,
+      "node_modules/swiper/esm/components/virtual/virtual.js": 26,
+      "node_modules/swiper/esm/components/zoom/zoom.js": 27,
+      "node_modules/swiper/swiper-bundle.min.js": 8
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18,
+      "19": 19,
+      "20": 20,
+      "21": 21,
+      "22": 22,
+      "23": 23,
+      "24": 24,
+      "25": 25,
+      "26": 26,
+      "27": 27
+    }
   },
   "chunks": {
-    "byName": {},
-    "bySource": {},
-    "usedIds": []
+    "byName": {
+      "main": 0,
+      "runtime": 1,
+      "vendor": 2
+    },
+    "bySource": {
+      "2 main": 0,
+      "0 main": 1,
+      "1 main": 2
+    },
+    "usedIds": [
+      0,
+      1,
+      2
+    ]
   }
 }

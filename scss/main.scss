@@ -2,7 +2,8 @@
 
 @import "settings";
 @import "../node_modules/foundation-sites/scss/foundation";
-@import "lightgallery";
+@import "../node_modules/lightgallery/src/sass/lightgallery";
+@import "../node_modules/swiper/swiper-bundle.min.css";
 @import "mixins";
 @import "headlines";
 @import "layout";
@@ -15,3 +16,7 @@
 @import "modal";
 @import "horizontal-teaser";
 @import "main-menu";
+@import "projects";
+@import "steps";
+@import "form";
+@import "button";

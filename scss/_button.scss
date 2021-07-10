@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.button {
+    @include reset-button();
+    display: block;
+    padding: $spaceXSmall $spaceSmall;
+    background: {
+        color: $orange;
+    }
+    color: $fontLight;
+    transition: background-color $anchorTransitionTimeAndEasingOut;
+    &:hover {
+        transition: background-color $anchorTransitionTimeAndEasingIn;
+        background: {
+            color: $bgColorLight;
+        }
+    }
+}
